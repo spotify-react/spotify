@@ -1,24 +1,32 @@
-import React from 'react';
-import logo from './logo.svg';
+
+import { useEffect, useState } from 'react';
 import './App.css';
+import Header from './Components/Header/Header';
+import Main from './Components/Main/Main';
+import { config } from './config';
+import { apiService } from './Service/Service';
+import getToken from './helpers/tokenHelper'
 
 function App() {
+  const [token, setToken] = useState<string | null>('');
+  const [newRealese, setNewRealese] = useState<any>([]);
+  
+  useEffect(() => {
+    setToken(getToken());
+    apiService.getNewRealeses().then(res=> setNewRealese(res));
+  }, [])
+
+  console.log(newRealese)
+  const logout = () => {
+    setToken('');
+    window.localStorage.removeItem('token');
+  }
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {!token ?
+        <a href={`${config.AUTH_ENDPOINT}?client_id=${config.CLIENT_ID}&redirect_uri=${config.REDIRECT_URI}&response_type=${config.RESPONSE_TYPE}`}>Log in</a>
+        : <button onClick={logout}>Logout</button>}
     </div>
   );
 }
