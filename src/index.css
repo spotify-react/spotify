@@ -15,3 +15,7 @@ body {
   --textColor2: #9D9D9E; 
 
 }
+
+*{
+  color: var(--textColor2);
+}

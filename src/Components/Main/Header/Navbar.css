@@ -28,10 +28,12 @@
   }
   
   /* style the active link in the side bar */
-  .side-bar .active a {
+  /* .side-bar .active a {
     color: var(--color5); 
-  }
-
+  } */
+.side-bar a.active{
+    color: var(--color5); 
+}
   .side-bar ul{
     padding: 0;
   }

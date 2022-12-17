@@ -10,9 +10,9 @@ function App() {
     <div className="App">
       <Routes>
         {loggedSelector === false ?
-          <Route path='/' element={<Auth />}></Route>
+          <Route path='*' element={<Auth />}></Route>
           :
-          <Route path='/' element={<Main />}></Route>
+          <Route path='*' element={<Main />}></Route>
         }
       </Routes>
     </div>

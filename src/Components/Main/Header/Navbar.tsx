@@ -4,19 +4,19 @@ import "./Navbar.css";
 function Navbar(): JSX.Element {
     return (
         <div className="Navbar">
-            <nav className="side-bar">
+            <div className="side-bar">
                 <ul>
                     <li className="active">
-                        <NavLink to={'/home'}>Home</NavLink>
+                        <NavLink to={'/'}>Home</NavLink>
                     </li>
                     <li>
                         <NavLink to={'/library'}>Library</NavLink>
                     </li>
                     <li>
-                        <NavLink to={'/playlists'}>Playlists</NavLink>
+                        <NavLink to={'/playlist'}>Playlists</NavLink>
                     </li>
                 </ul>
-            </nav>
+            </div>
         </div>
     );
 }

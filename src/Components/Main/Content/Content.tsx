@@ -5,9 +5,9 @@ function Content(): JSX.Element {
     return (
         <div className="Content">
 			<Routes>
-                <Route path="/home" element={'home'}></Route>
+                <Route path="/" element={'home'}></Route>
                 <Route path="/library" element={'library'}></Route>
-                <Route path="/playlists" element={'playlists'}></Route>
+                <Route path="/playlist" element={'playlists'}></Route>
             </Routes>
         </div>
     );
