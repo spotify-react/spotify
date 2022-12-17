@@ -1,5 +1,6 @@
 .Main {
+    display: flex;
 	width: 100%;
-    min-height: 90%;
-    background-color: aqua;
+    height: 100%;
+    background-color: lightgray;
 }
