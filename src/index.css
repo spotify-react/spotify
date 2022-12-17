@@ -3,8 +3,15 @@ body {
 }
 
 * {
-  --color1: #EB6440;
+  /* --color1: #EB6440;
   --color2: #497174;
   --color3: #D6E4E5;
-  --color4: #EFF5F5;
+  --color4: #EFF5F5; */
+
+  --color5: #3542C6;
+  --color6: #19191aee;
+  --color7: #19191a;
+  --textColor: #3E3E42;
+  --textColor2: #9D9D9E; 
+
 }

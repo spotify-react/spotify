@@ -1,5 +1,37 @@
 .Navbar {
 	width: 10%;
     height: 100%;
-    background-color: #497174;
+    background-color: var(--color6);
 }
+
+.side-bar {
+    position: fixed; 
+    top: 0;
+    left: 0;
+    bottom: 0;
+    color: #fff; 
+    overflow-y: auto; 
+  }
+  
+  /* style the items in the side bar */
+  .side-bar li {
+    list-style: none; /* remove the default bullet points */
+    padding: 10px; /* add some padding to the items */
+  }
+  
+  /* style the links in the side bar */
+  .side-bar a {
+    padding-top: 10px;
+    display: block; /* make the links block-level elements */
+    color: #fff; /* set the text color */
+    text-decoration: none; /* remove the default underline */
+  }
+  
+  /* style the active link in the side bar */
+  .side-bar .active a {
+    color: var(--color5); 
+  }
+
+  .side-bar ul{
+    padding: 0;
+  }
